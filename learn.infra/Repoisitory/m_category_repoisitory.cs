@@ -63,10 +63,10 @@ namespace learn.infra.Repoisitory
         {
             var parameter = new DynamicParameters();
             parameter.Add("categoryid", category.id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            parameter.Add("name", category.name, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameter.Add("cname", category.name, dbType: DbType.String, direction: ParameterDirection.Input);
 
 
-            var result = dbContext.dbConnection.Execute("m_category_package.updateone", parameter, commandType: CommandType.StoredProcedure);
+            var result = dbContext.dbConnection.ExecuteAsync("m_category_package.updateone", parameter, commandType: CommandType.StoredProcedure);
 
             return true;
 

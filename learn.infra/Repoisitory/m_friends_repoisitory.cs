@@ -41,7 +41,7 @@ namespace learn.infra.Repoisitory
             parameter.Add("friendsid", id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
 
-            IEnumerable<m_friends> result = dbContext.dbConnection.Query<m_friends>("m_friends_package.getbyid", parameter, commandType: CommandType.StoredProcedure);
+            IEnumerable<m_friends> result = dbContext.dbConnection.Query<m_friends>("m_friends_package.getbyfirstid", parameter, commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
 
         }
@@ -52,7 +52,7 @@ namespace learn.infra.Repoisitory
             parameter.Add("friendsid", id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
 
-            IEnumerable<m_friends> result = dbContext.dbConnection.Query<m_friends>("m_friends_package.getbyid", parameter, commandType: CommandType.StoredProcedure);
+            IEnumerable<m_friends> result = dbContext.dbConnection.Query<m_friends>("m_friends_package.getbysecondid", parameter, commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
 
         }

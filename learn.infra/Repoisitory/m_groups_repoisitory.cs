@@ -49,9 +49,9 @@ namespace learn.infra.Repoisitory
         {
             var parameter = new DynamicParameters();
 
-            parameter.Add("name", groups.groupname, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameter.Add("groupname", groups.groupname, dbType: DbType.String, direction: ParameterDirection.Input);
 
-            var result = dbContext.dbConnection.ExecuteAsync("m_groups_package.insertone", parameter, commandType: CommandType.StoredProcedure);
+            var result = dbContext.dbConnection.ExecuteAsync("m_groups_package.creatone", parameter, commandType: CommandType.StoredProcedure);
 
             return true;
 

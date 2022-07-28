@@ -28,13 +28,13 @@ namespace Final_task.Controllers
             return ser.getall();
         }
 
-        [HttpGet("getbyid/{id}")]
+        [HttpGet("getbyfirstid/{id}")]
 
         public m_friends getbyfirstid(int? id)
         {
             return ser.getbyfirstid(id);
         }
-        [HttpGet("getbyid/{id}")]
+        [HttpGet("getbysecondid/{id}")]
 
         public m_friends getbysecondid(int? id)
         {

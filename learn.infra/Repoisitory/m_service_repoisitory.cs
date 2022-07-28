@@ -61,7 +61,7 @@ namespace learn.infra.Repoisitory
             parameter.Add("price", service.price, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("category_id", service.category_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            var result = dbContext.dbConnection.ExecuteAsync("m_service_package.insertone", parameter, commandType: CommandType.StoredProcedure);
+            var result = dbContext.dbConnection.ExecuteAsync("m_service_package.creatone", parameter, commandType: CommandType.StoredProcedure);
 
             return true;
 
@@ -75,7 +75,7 @@ namespace learn.infra.Repoisitory
             parameter.Add("price", service.price, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("category_id", service.category_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            var result = dbContext.dbConnection.ExecuteAsync("m_service_package.creatone", parameter, commandType: CommandType.StoredProcedure);
+            var result = dbContext.dbConnection.ExecuteAsync("m_service_package.updateone", parameter, commandType: CommandType.StoredProcedure);
 
 
             return true;
